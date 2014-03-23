@@ -1,0 +1,15 @@
+class MicropostControlller < ApplicationController
+
+
+def create
+    @micropost = Micropost.create(micropost_params)
+ 
+ end
+ 
+ private
+ def micropost_params
+   params.require(:micropost).permit(:content) if params[:micropost]
+   
+ end
+ 
+end   

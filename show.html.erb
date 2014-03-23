@@ -1,0 +1,5 @@
+<h2>Users Post</h2>
+<% if @user.microposts.any? %>
+    <table class="microposts" summary="User microposts">
+		<%= render @microposts %>
+	</table>
